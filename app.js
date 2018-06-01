@@ -31,7 +31,7 @@ app.use('/', routes);
 
 // ========================== Database Connection ==============================
 const mongoURL = mongoDb.makeConnectionString();
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURL, { useMongoClient: true });
 const db = mongoose.connection;
 
 db.on('connecting', function() {
