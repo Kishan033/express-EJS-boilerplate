@@ -1,0 +1,18 @@
+version: "2.0"
+services:
+  app:
+    container_name: node-ejs-app
+    image: node-ejs-app
+    ports:
+      - 3000:3000
+    links:
+      - monoDb
+
+  monoDb:
+    container_name: mongo
+    image: mongo
+    # volumes:
+    #   - /usr/local/var/mongodb:/usr/src/data
+    ports:
+      - "27017:27017"
+
