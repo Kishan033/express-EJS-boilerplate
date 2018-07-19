@@ -10,7 +10,7 @@ services:
 
   monoDb:
     container_name: mongo
-    image: mongo
+    image: mvertes/alpine-mongo
     # volumes:
     #   - /usr/local/var/mongodb:/usr/src/data
     ports:
